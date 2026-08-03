@@ -1,0 +1,28 @@
+.upper {
+  display: flex;
+}
+
+.upper1 {
+  display: flex;
+  width: 30%;
+}
+
+.upper1Image {
+  margin-top: 20px;
+  padding-top: 30px;
+}
+
+.upper2 {
+  display: flex;
+  width: 70%;
+}
+
+.ViewSaleButton {
+  background-color: #7367f0;
+  color: white;
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
