@@ -39,7 +39,6 @@
 
 .statistics-and-reporting-time {
   display: flex;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -51,11 +50,111 @@
 
 .upper2chart {
   display: flex;
-  width: 100%;
-  box-sizing: border-box;
+  align-items: center;
+}
+
+.upper2chart1 {
+    display: flex;
+    align-items: center; /* Vertical Center */
+    gap: 15px;  
+  
+}
+
+.upper2chart2 {
+    display: flex;
+    align-items: center; /* Vertical Center */
+    gap: 15px;  
+}
+
+.upper2chart3 {
+    display: flex;
+    align-items: center; /* Vertical Center */
+    gap: 15px;  
+}
+}
+
+.upper2chart4 {
+    display: flex;
+    align-items: center; /* Vertical Center */
+    gap: 15px;  
+}
+
+.upper2chart1icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(115, 103, 240, 0.16);
+    color: #7367f0;
+    border-radius: 8px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper2chart1text {
+  width: 13%; 
+  margin-left: auto;
+  margin: 10px;
+}
+
+.upper2chart2icon {
+    width: 48px;
+    height: 48px;
+    background-color: #d6f4f8;
+    color: #00bad1;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper2chart2text {
+  width: 13%; 
+  margin-left: auto;
+  
+}
+
+.upper2chart3icon {
+    width: 48px;
+    height: 48px;
+    background-color: #ffe2e3;
+    color: #ff4c51;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.upper2chart3text {
+  width: 13%; 
+  margin-left: auto;
+  margin: 10px;
+}
+
+.upper2chart4icon {
+    width: 48px;
+    height: 48px;
+    background-color: #ddf6e8;
+    color: #28c76f;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper2chart4text {
+  width: 13%; 
+  margin-left: auto;
+  margin: 10px;
 }
 
 .icon {
-      font-size:40px;
       color:#7367f0;
+}
+
+@media screen and (max-width: 800px) {
+  .upper2chart1, .upper2chart2, .upper2chart3, .upper2chart4 {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
 }
