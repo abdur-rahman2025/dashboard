@@ -22,13 +22,14 @@
           .navbar_body {
             box-sizing: border-box;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px 10px;
             background: #204fad;
             font-family: 'Segoe UI', Arial, sans-serif;
           }
 
           .navbar {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             background: #cdd8cc;
@@ -165,27 +166,21 @@
 /* Upper_Div_Start*/
 .upper {
   display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 5px;
 }
 
       .upper1 {
+        flex: 1;
         display: flex;
-        width: 30%;
         box-sizing: border-box;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         padding: 20px;
         margin-right: 20px;
       }                
       
-      @media screen and (max-width: 600px) {
-        .upper1 {
-          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-        }
-      }
-
-
 
               .ViewSaleButton {
                 background-color: #7367f0;
@@ -201,13 +196,17 @@
               .upper1Image {
                 margin-top: 20px;
                 padding-top: 30px;
+                max-width: 100%;
+                height: auto;
               }
 
       .upper2 {
-        width: 70%;
+        flex: 3;
+        flex-wrap: wrap;
         box-sizing: border-box;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         padding: 20px;
+        
       }
 
             .statistics-and-reporting-time {
@@ -223,6 +222,7 @@
 
             .upper2chart {
               display: flex;
+              flex-wrap: wrap;
               justify-content: space-between;
               align-items: center;
               margin: 0 auto; 
@@ -234,7 +234,6 @@
                     display: flex;
                     align-items: center; /* Vertical Center */
                     gap: 15px;  
-                  
                 }
 
                     .upper2chart1icon {
