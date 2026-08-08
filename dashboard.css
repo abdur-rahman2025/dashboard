@@ -1,160 +1,328 @@
+.full_page {
+  display: flex;
+  width: 100%;
+}
+  /*--------------- Under_Full_page_Start_dasboard_manue ------------*/
+
+      .dasboard_manue {
+        background-color: #0d4141;
+        width: 20%;
+        color: #ffffff;
+      }
+
+  /*--------------- Under_Full_page_Start_body_Page ------------*/
+
+      .body_page {
+        background-color: white; 
+        width: 80%;
+      }
+
+        /*--------------- Under_Body_page_Start_Navbar ------------*/
+
+          .navbar_body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 40px 20px;
+            background: #204fad;
+            font-family: 'Segoe UI', Arial, sans-serif;
+          }
+
+          .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #cdd8cc;
+            border: 1px solid #1f817c;
+            border-radius: 30px;
+            padding: 10px 18px;
+            max-width: 1200px;
+            margin: 0 auto; 
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+          }
+
+          /* Search box */
+          .navbar-search {
+            display: flex;  /*  ১. Searc Icon, ২. Place Holde and ৩.  Cntr + K  একই সারিতে */
+            align-items: center;
+            gap: 8px; /* ১. Searc Icon, ২. Place Holde and ৩.  Cntr + K  */
+            flex: 1; /* এটি Flex Container-এর ভেতরের একটি আইটেমকে বলে, খালি জায়গা সমানভাবে দখল করতে। */
+            max-width: 300px;  /* ১. Searc Icon, ২. Place Holde and ৩.  Cntr + K সহ মোট সর্বোচ্চ প্রস্থ্   */
+            border: 1px solid #fc0b0b;
+            padding: 5px 10px;
+            border-radius: 20px;
+          }
+
+          .navbar-search svg {
+            flex-shrink: 0;
+            color: #1a1475;
+          }
+
+          .navbar-search input {
+            border: 2px solid #16124e;
+            outline: 2px solid #459e39;
+            font-size: 14px;
+            color: #8f2041;
+            width: 100%;
+            background: rgba(189, 147, 31, 0.288);
+          }
+
+          .navbar-search input::placeholder {
+            color: #ec1479;
+            background: rgb(179, 190, 19);
+          }
+
+          .navbar-search .shortcut {
+            font-size: 12px;
+            color: #6cb913;
+            background: #f3f4f6;
+            border: 1px solid #721f4d;
+            border-radius: 6px;
+            padding: 2px 6px;
+            white-space: nowrap; /* লেখাকে এক লাইনে রাখবে, প্রয়োজনে লাইন ভাঙবে না। */
+          }
+
+          /* Right side icons     Right side icons     Right side icons */
+
+          .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;  /* প্রতিটি Flex Item-এর মধ্যে ২০px ফাঁকা জায়গা রাখবে। */
+            padding: 2px 4px;
+            border-radius: 8px;
+            border: 1px solid #fc0b0b;
+          }
+
+          .icon-btn {
+            background: skyblue;
+            border: 1px solid #3808e7;;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #511788;
+            border-radius: 8px;
+            transition: background 0.15s ease, color 0.15s ease;
+          }
+
+          .icon-btn:hover {
+            background: #f3f4f6;
+            color: #f8b706;
+          }
+
+          .icon-btn svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          /* Notification bell with dot */
+          .bell-wrap {
+            position: relative;
+          }
+
+          .bell-dot {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #ef4444;
+            border: 1.5px solid #ffffff;
+          }
+
+          /* Avatar */
+          .avatar-wrap {
+            position: relative;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            border: 1.5px solid #0fe2ad;
+          }
+
+          .avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover; /*ছবিকে Container-এর পুরো জায়গা ভরতে বাধ্য করা, তবে ছবির অনুপাত (Aspect Ratio) নষ্ট না করে।*/
+            display: block; /*এতে ছবির নিচে অতিরিক্ত ফাঁকা জায়গা থাকে না এবং Layout আরও পরিষ্কার হয়।*/
+          }
+
+          .status-dot {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+            border: 2px solid #ffffff;
+          }
+
+          /* navbar end */
+          
+
+/* Upper_Div_Start*/
 .upper {
   display: flex;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  margin: 5px;
 }
 
-.upper1 {
-  display: flex;
-  width: 30%;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin-right: 20px;
-}
-
-.ViewSaleButton {
-  background-color: #7367f0;
-  color: white;
-  font-size: 15px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.upper1Image {
-  margin-top: 20px;
-  padding-top: 30px;
-}
-
-.upper2 {
-  width: 70%;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-}
-
-.statistics-and-reporting-time {
-  display: flex;
-  box-sizing: border-box;
-}
-
-.reporting-time {
-  margin-left: auto;
-  color: #acaab1;
-  box-sizing: border-box;
-}
-
-.upper2chart {
-  display: flex;
-  align-items: center;
-}
-
-.upper2chart1 {
-    display: flex;
-    align-items: center; /* Vertical Center */
-    gap: 15px;  
-  
-}
-
-.upper2chart2 {
-    display: flex;
-    align-items: center; /* Vertical Center */
-    gap: 15px;  
-}
-
-.upper2chart3 {
-    display: flex;
-    align-items: center; /* Vertical Center */
-    gap: 15px;  
-}
-}
-
-.upper2chart4 {
-    display: flex;
-    align-items: center; /* Vertical Center */
-    gap: 15px;  
-}
-
-.upper2chart1icon {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(115, 103, 240, 0.16);
-    color: #7367f0;
-    border-radius: 8px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.upper2chart1text {
-  width: 13%; 
-  margin-left: auto;
-  margin: 10px;
-}
-
-.upper2chart2icon {
-    width: 48px;
-    height: 48px;
-    background-color: #d6f4f8;
-    color: #00bad1;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.upper2chart2text {
-  width: 13%; 
-  margin-left: auto;
-  
-}
-
-.upper2chart3icon {
-    width: 48px;
-    height: 48px;
-    background-color: #ffe2e3;
-    color: #ff4c51;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+      .upper1 {
+        display: flex;
+        width: 30%;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-right: 20px;
+      }                
+      
+      @media screen and (max-width: 600px) {
+        .upper1 {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
 
 
-.upper2chart3text {
-  width: 13%; 
-  margin-left: auto;
-  margin: 10px;
-}
 
-.upper2chart4icon {
-    width: 48px;
-    height: 48px;
-    background-color: #ddf6e8;
-    color: #28c76f;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+              .ViewSaleButton {
+                background-color: #7367f0;
+                color: white;
+                font-size: 15px;
+                padding: 12px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                box-sizing: border-box;
+              }
 
-.upper2chart4text {
-  width: 13%; 
-  margin-left: auto;
-  margin: 10px;
-}
+              .upper1Image {
+                margin-top: 20px;
+                padding-top: 30px;
+              }
 
-.icon {
-      color:#7367f0;
-}
+      .upper2 {
+        width: 70%;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+      }
 
-@media screen and (max-width: 800px) {
-  .upper2chart1, .upper2chart2, .upper2chart3, .upper2chart4 {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-}
+            .statistics-and-reporting-time {
+              display: flex;
+              box-sizing: border-box;
+            }
+
+            .reporting-time {
+              margin-left: auto;
+              color: #acaab1;
+              box-sizing: border-box;
+            }
+
+            .upper2chart {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 auto; 
+              flex: 1;
+
+            }
+
+                .upper2chart1 {
+                    display: flex;
+                    align-items: center; /* Vertical Center */
+                    gap: 15px;  
+                  
+                }
+
+                    .upper2chart1icon {
+                        width: 48px;
+                        height: 48px;
+                        background-color: rgba(115, 103, 240, 0.16);
+                        color: #7367f0;
+                        border-radius: 8px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .upper2chart1text {
+                        width:auto;
+                        margin:0;
+                    }
+
+                .upper2chart2 {
+                    display: flex;
+                    align-items: center; /* Vertical Center */
+                    gap: 15px;  
+                }
+                    .upper2chart2icon {
+                    width: 48px;
+                    height: 48px;
+                    background-color: #d6f4f8;
+                    color: #00bad1;
+                    border-radius: 8px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                   }
+
+                    .upper2chart2text {
+                    width:auto;
+                    margin:0;
+                  
+                   }
+
+                .upper2chart3 {
+                    display: flex;
+                    align-items: center; /* Vertical Center */
+                    gap: 15px;  
+                }
+                    .upper2chart3icon {
+                    width: 48px;
+                    height: 48px;
+                    background-color: #ffe2e3;
+                    color: #ff4c51;
+                    border-radius: 8px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    }
+
+
+                    .upper2chart3text {
+                    width:auto;
+                    margin:0;
+                    }
+
+
+                .upper2chart4 {
+                    display: flex;
+                    align-items: center; /* Vertical Center */
+                    gap: 15px;  
+                }
+
+                    .upper2chart4icon {
+                        width: 48px;
+                        height: 48px;
+                        background-color: #ddf6e8;
+                        color: #28c76f;
+                        border-radius: 8px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .upper2chart4text {
+                        width:auto;
+                        margin:0;
+                    }
+
+    @media screen and (max-width: 600px) {
+          .upper1, .upper2 {
+            width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+          }
+        }
+/* Upper_Div_End */

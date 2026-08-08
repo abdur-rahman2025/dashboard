@@ -7,81 +7,180 @@
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
-<body>
-    <div class="upper">
+<body>   
+          <!--  full_page----------------- full_page --------------- -->
+    <div class="full_page">
+             <!--  dasboard_manue----------------- dasboard_manue -------------- -->
+        <aside class="dasboard_manue">
+            <p>Dashboard</p>
+        </aside>
 
-        <div class="upper1">
+             <!-- End_dasboard_manue------------ End_dasboard_manue -------- -->      
 
-            <div class="upper1Congrats">
-                <h3>Congratulations John!&#127881;</h3>
-                <p>Best Seller of the month</p>
-                <h2>&#36;48.9K</h2>
-                <button class="ViewSaleButton">View Sales</button>
+             <!--  body Page ----------------- body Page ----------------- -->
+        <div class="body_page">
+
+                <!--navbar body ----------------- navbar body --------->
+            <div class="navbar_body">
+                  <nav class="navbar">
+                      <!-- Search -->
+                      <div class="navbar-search">
+
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="11" cy="11" r="8"></circle>
+                              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                          </svg>
+
+                          <input type="text" placeholder="Search" />
+
+                          <span class="shortcut">CTRL + K</span>
+                      </div>
+
+                      <!-   Right actions  - Right actions -  Right actions->
+
+                      <div class="navbar-actions">
+                            <!-- Translate -->
+
+                            <button class="icon-btn" aria-label="Translate" title="Translate">
+                              <svg viewBox="0 0 24 24" fill="white" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 5h7"></path>
+                                <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+                                <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+                                <path d="M12 20l4 -9l4 9"></path>
+                                <path d="M19.1 18h-6.2"></path>
+                              </svg>
+                            </button>
+
+                            <!-- Theme toggle -->
+
+                            <button class="icon-btn" aria-label="Toggle theme" title="Toggle theme">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="M4.93 4.93l1.41 1.41"></path>
+                                <path d="M17.66 17.66l1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="M6.34 17.66l-1.41 1.41"></path>
+                                <path d="M19.07 4.93l-1.41 1.41"></path>
+                              </svg>
+                            </button>
+
+                            <!-- Apps grid -->
+
+                            <button class="icon-btn" aria-label="Apps" title="Apps">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                                <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                                <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                                <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                              </svg>
+                            </button>
+
+                            <!-- Notifications -->
+
+                            <button class="icon-btn bell-wrap" aria-label="Notifications" title="Notifications">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+                                <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                              </svg>
+                              <span class="bell-dot"></span>
+                            </button>
+
+                            <!-- Avatar -->
+
+                            <div class="avatar-wrap">
+                                <!-- ছবি থাকলে img ব্যবহার করো, না থাকলে নিচের fallback div রাখো -->
+                                <img src="image/photo.jpg" class="avatar" alt="User avatar" />
+                                <span class="status-dot"></span>
+                            </div>
+
+                      </div>
+                  </nav>
             </div>
+             <!--navbar body End----------------- navbar body End--------------- -->
 
-            <div class="upper1Image">
-                <img src="image/congratsman.png" height="150px" alt="congrats">
-            </div>
+            <div class="upper">
 
-        </div>
+                    <div class="upper1">
 
-        <div class="upper2">
-            
-                <div class="statistics-and-reporting-time">
+                            <div class="upper1Congrats">
+                                <h3>Congratulations John!&#127881;</h3>
+                                <p>Best Seller of the month</p>
+                                <h2>&#36;48.9K</h2>
+                                <button class="ViewSaleButton">View Sales</button>
+                            </div>
 
-                    <div class="statistics">
-                        <h3>Statistics</h3> 
+                            <div class="upper1Image">
+                                <img src="image/congratsman.png" height="150px" alt="congrats">
+                            </div>
+
                     </div>
 
-                    <div class="reporting-time">
-                        <p>Updated 1 month ago</p>
+                    <div class="upper2">
                         
-                    </div>
+                            <div class="statistics-and-reporting-time">
 
-                </div>
+                                <div class="statistics">
+                                    <h3>Statistics</h3> 
+                                </div>
 
-                <div class="upper2chart">
-                    <div class="upper2chart1">
-                        <div class="upper2chart1icon">
-                            <i class="ti ti-chart-pie-2" style="font-size:32px;"></i>
-                        </div>
-                        <div class="upper2chart1text">
-                            <h3>230K</h3>
-                            <p style="color: gray;">Sales</p>
-                        </div>
-                    </div>
-                    <div class="upper2chart2">
-                        <div class="upper2chart2icon">
-                            <i class="ti ti-users" style="font-size:32px;"></i>
-                        </div>
-                        <div class="upper2chart2text">
-                            <h3>8.549K</h3>
-                            <p style="color: gray;">Customers</p>
-                        </div>
-                    </div>
-                    <div class="upper2chart3">
-                        <div class="upper2chart3icon">
-                            <i class="ti ti-shopping-cart" style="font-size:32px;"></i>
-                        </div>
-                        <div class="upper2chart3text">
-                            <h3>1.423K</h3>
-                            <p style="color: gray;">Products</p>
-                        </div>
-                    </div>
-                    <div class="upper2chart4">
-                        <div class="upper2chart4icon">
-                             <i class="ti ti-currency-dollar" style="font-size:32px;"></i>
-                        </div>
-                        <div class="upper2chart4text">
-                            <h3>$9745</h3> 
-                            <p style="color: gray;">Revenue</p>
-                        </div> 
-                    </div>
-                    <div class="upper2chart3"></div>
-                    <div class="upper2chart4"></div>
-                </div>
+                                <div class="reporting-time">
+                                    <p>Updated 1 month ago</p>
+                                </div>
 
-        </div>
-    </div>
+                            </div>
+
+                            <div class="upper2chart">
+                                    <div class="upper2chart1">
+                                        <div class="upper2chart1icon">
+                                            <i class="ti ti-chart-pie-2" style="font-size:32px;"></i>
+                                        </div>
+                                        <div class="upper2chart1text">
+                                            <h3>230K</h3>
+                                            <p style="color: gray;">Sales</p>
+                                        </div>
+                                    </div>
+                                    <div class="upper2chart2">
+                                        <div class="upper2chart2icon">
+                                            <i class="ti ti-users" style="font-size:32px;"></i>
+                                        </div>
+                                        <div class="upper2chart2text">
+                                            <h3>8.549K</h3>
+                                            <p style="color: gray;">Customers</p>
+                                        </div>
+                                    </div>
+                                    <div class="upper2chart3">
+                                        <div class="upper2chart3icon">
+                                            <i class="ti ti-shopping-cart" style="font-size:32px;"></i>
+                                        </div>
+                                        <div class="upper2chart3text">
+                                            <h3>1.423K</h3>
+                                            <p style="color: gray;">Products</p>
+                                        </div>
+                                    </div>
+                                    <div class="upper2chart4">
+                                        <div class="upper2chart4icon">
+                                            <i class="ti ti-currency-dollar" style="font-size:32px;"></i>
+                                        </div>
+
+                                        <div class="upper2chart4text">
+                                            <h3>$9745</h3> 
+                                            <p style="color: gray;">Revenue</p>
+                                        </div> 
+                                    </div>
+                            </div>
+
+                    </div>
+            </div>
+          <!--  End_upper ----------------- End_upper ----------------- -->
+
+      </div>
+        <!--  End_body_Page ----------------- End_body_Page ----------------- -->
+
+  </div>
+
+  <!--  End_full_page----------------- End_full_page ----------End_full_page---------- -->
 </body>
 </html>
