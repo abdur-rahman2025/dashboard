@@ -8,6 +8,20 @@
     --badge: #ea5455;
     --divider: rgba(255,255,255,0.06);
     --purple: #7367f0;
+    /*Middle Div */
+
+    --purple-light: #ece8fd;
+    --orange: #ff9f43;
+    --orange-track: #ffe3c2;
+    --teal: #00cfe8;
+    --green: #28c76f;
+    --green-track: #d7f5e4;
+    --text-dark: #2f2b3d;
+    --text-muted: #a5a3ae;
+    --text-faint: #d3d1d9;
+    --card-bg: #ffffff;
+    --page-bg: #f8f7fa;
+    --border: #eeedf1;
   }
 
   *{ box-sizing: border-box; }
@@ -603,6 +617,340 @@
       padding: 4px 6px 22px 6px;
     }
   }
+
+
+  /*Middle Div*/
+
+  .dashboard-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2.1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "profit expense revenue budget"
+      "leads  leads   revenue budget";
+    gap: 22px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card{
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 22px 22px;
+    box-shadow: 0 3px 10px rgba(47,43,61,0.04);
+  }
+
+  .card-profit{ grid-area: profit; }
+  .card-expense{ grid-area: expense; }
+  .card-leads{ grid-area: leads; }
+  .card-revenue{ grid-area: revenue; }
+  .card-budget{ grid-area: budget; }
+
+  .card-title{
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0 0 2px 0;
+  }
+  .card-sub{
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .card-value{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .card-delta{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  /* ===================== Profit card ===================== */
+  .card-profit .chart-wrap{
+    margin: 10px 0 14px 0;
+    height: 90px;
+  }
+  .card-profit .stat-row{
+    
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  /* ===================== Expense (gauge) card ===================== */
+  .card-expense{
+    display: flex;
+    flex-direction: column;
+  }
+  .gauge-row{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .gauge-ring{
+    position: relative;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: conic-gradient(
+      from 130deg,
+      var(--orange) 0deg 242deg,
+      var(--orange-track) 242deg 310deg,
+      transparent 310deg 360deg
+    );
+  }
+  .gauge-hole{
+    position: absolute;
+    inset: 14px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .gauge-note{
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ===================== Leads (donut) card ===================== */
+  .card-leads{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .leads-info .card-value{ margin-top: 6px; }
+  
+  .leads-info .card-delta{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+  .donut-ring{
+    position: relative;
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: conic-gradient(
+      from -90deg,
+      var(--green) 0deg 330deg,
+      var(--green-track) 330deg 360deg
+    );
+  }
+  .donut-hole{
+    position: absolute;
+    inset: 16px;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .donut-hole .num{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.1;
+  }
+  .donut-hole .lbl{
+    font-size: 11px;
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  /* ===================== Revenue Report card ===================== */
+  .revenue-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .legend{
+    display: flex;
+    gap: 18px;
+  }
+  .legend-item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .legend-dot{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+  }
+  .legend-dot.earn{ background: var(--purple); }
+  .legend-dot.exp{ background: var(--orange); }
+
+  .chart-body{
+    display: flex;
+    gap: 10px;
+  }
+  .y-axis{
+    position: relative;
+    width: 40px;
+    height: 300px;
+    flex-shrink: 0;
+  }
+  .y-axis span{
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    color: var(--text-muted);
+    transform: translateY(-50%);
+  }
+
+  .bars-plot{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+  }
+  .bars-top, .bars-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .bars-top{
+    flex: 3;
+    border-bottom: 1px solid var(--border);
+  }
+  .bars-bottom{
+    flex: 2;
+    align-items: flex-start;
+  }
+  .bar-col{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .bar-earn{
+    width: 40%;
+    max-width: 22px;
+    background: var(--purple);
+    border-radius: 6px 6px 0 0;
+  }
+  .bar-exp{
+    width: 40%;
+    max-width: 22px;
+    background: var(--orange);
+    border-radius: 0 0 6px 6px;
+  }
+  .x-axis{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .x-axis span{
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ===================== Budget card ===================== */
+  .card-budget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .year-pill{
+    background: var(--purple-light);
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 22px;
+  }
+  .year-pill svg{ width: 12px; height: 12px; }
+
+  .budget-amount{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .budget-sub{
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .budget-sub b{ color: var(--text-dark); }
+
+  .budget-spark{
+    width: 100%;
+    height: 70px;
+    margin: 26px 0 26px 0;
+  }
+
+  .btn-increase{
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .btn-increase:hover{
+    background: #5f55e6;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 1100px){
+    .dashboard-grid{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "profit expense"
+        "leads  leads"
+        "revenue revenue"
+        "budget budget";
+    }
+  }
+
+  @media (max-width: 640px){
+    body{ padding: 16px; }
+    .dashboard-grid{
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "profit"
+        "expense"
+        "leads"
+        "revenue"
+        "budget";
+      gap: 16px;
+    }
+    .card-leads{
+      flex-wrap: wrap;
+    }
+  }
+
+  /*Middle Div End*/
         
         
        
